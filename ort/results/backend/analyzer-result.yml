@@ -1,0 +1,411 @@
+---
+repository:
+  vcs:
+    type: "Git"
+    url: ""
+    revision: "8c5bac35a85d7cd93fc4f21cae7f652815b2b870"
+    path: ""
+  vcs_processed:
+    type: "Git"
+    url: ""
+    revision: "8c5bac35a85d7cd93fc4f21cae7f652815b2b870"
+    path: ""
+  config:
+    excludes:
+      paths:
+      - pattern: "**/assets/**"
+        reason: "OTHER"
+        comment: "This directory contains the legacy frontend assets which are part\
+          \ of the frontend report."
+      - pattern: "**/libraryLicenseInfos.json"
+        reason: "OTHER"
+        comment: "This file contains the old FOSS information which duplicates scan\
+          \ results."
+      - pattern: "**/lib/**/*license.txt"
+        reason: "OTHER"
+        comment: "These files contain license texts of the old FOSS information which\
+          \ duplicates scan results."
+      - pattern: "**/lib/**/*notice.txt"
+        reason: "OTHER"
+        comment: "These files contain Apache 2.0 notice texts of the old FOSS information\
+          \ which duplicates scan results."
+      - pattern: "**/assets/license/*license.txt"
+        reason: "OTHER"
+        comment: "These files contain license texts of the old FOSS information which\
+          \ duplicates scan results."
+      - pattern: "**/.github/**"
+        reason: "BUILD_TOOL_OF"
+        comment: "Not distributed"
+      - pattern: "**/.idea/**"
+        reason: "BUILD_TOOL_OF"
+        comment: "Not distributed"
+      scopes:
+      - pattern: ".*[tT]est.*"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+      - pattern: "annotationProcessor|lombok|compileClasspath|rewrite"
+        reason: "BUILD_DEPENDENCY_OF"
+        comment: "Packages for building only."
+    license_choices:
+      repository_license_choices:
+      - given: "Elastic-2.0 OR SSPL-1.0"
+        choice: "Elastic-2.0"
+analyzer:
+  start_time: "2025-06-30T14:39:27.202731622Z"
+  end_time: "2025-06-30T14:39:46.985687590Z"
+  environment:
+    ort_version: "61.0.0"
+    build_jdk: "21.0.7+6-LTS"
+    java_version: "21.0.7"
+    os: "Linux"
+    processors: 2
+    max_memory: 1553989632
+    variables:
+      ORT_CONFIG_DIR: "/workingdir/config-backend"
+      HOME: "/home/ort"
+      JAVA_HOME: "/opt/java/openjdk"
+    tool_versions: {}
+  config:
+    allow_dynamic_versions: false
+    enabled_package_managers:
+    - "GradleInspector"
+    skip_excluded: true
+  result:
+    projects:
+    - id: "Gradle:examples:minimal-backend-repo:1.0-SNAPSHOT"
+      definition_file_path: "build.gradle"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: ""
+        revision: "8c5bac35a85d7cd93fc4f21cae7f652815b2b870"
+        path: ""
+      homepage_url: ""
+      scope_names:
+      - "runtimeClasspath"
+    packages:
+    - id: "Maven:io.micrometer:micrometer-commons:1.14.7"
+      purl: "pkg:maven/io.micrometer/micrometer-commons@1.14.7"
+      authors:
+      - "Tommy Ludwig"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Module containing common code"
+      homepage_url: "https://github.com/micrometer-metrics/micrometer"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.14.7/micrometer-commons-1.14.7.jar"
+        hash:
+          value: "8c2c669afe1377ba4343409dc3d360a07fa1b81c"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.14.7/micrometer-commons-1.14.7-sources.jar"
+        hash:
+          value: "9a3e3e29c6fccbd6aacf59dfbde0f315a4000039"
+          algorithm: "SHA-1"
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "ssh://git@github.com/micrometer-metrics/micrometer.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.micrometer:micrometer-observation:1.14.7"
+      purl: "pkg:maven/io.micrometer/micrometer-observation@1.14.7"
+      authors:
+      - "Tommy Ludwig"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Module containing Observation related code"
+      homepage_url: "https://github.com/micrometer-metrics/micrometer"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.14.7/micrometer-observation-1.14.7.jar"
+        hash:
+          value: "f5a65b5ca7ddb52669efb6c2979181cdbdfbd76d"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.14.7/micrometer-observation-1.14.7-sources.jar"
+        hash:
+          value: "28f305d6374718a25ba6c2ff5f60055994e308d0"
+          algorithm: "SHA-1"
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "ssh://git@github.com/micrometer-metrics/micrometer.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-aop:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-aop@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring AOP"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.7/spring-aop-6.2.7.jar"
+        hash:
+          value: "3df3ee9217cb62e65382718351e56f1eeb76e74c"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.7/spring-aop-6.2.7-sources.jar"
+        hash:
+          value: "8ebf543fb172096076506e622ac9a24d8ba5711c"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-beans:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-beans@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring Beans"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.7/spring-beans-6.2.7.jar"
+        hash:
+          value: "64119950b73943f67196705e43acddd7bf714c45"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.7/spring-beans-6.2.7-sources.jar"
+        hash:
+          value: "88c6c8759d565247f94edccee2ae4c9052285395"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-context:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-context@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring Context"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.7/spring-context-6.2.7.jar"
+        hash:
+          value: "e0f3850bba7ff52016429e8d2fa39b5107f1fde6"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.7/spring-context-6.2.7-sources.jar"
+        hash:
+          value: "942603a313f5c84e0a954971ec9963fe1f60be6d"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-core:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-core@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring Core"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.7/spring-core-6.2.7.jar"
+        hash:
+          value: "525a228b8b4323568b7aa9e49c1e1df27838adf1"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.7/spring-core-6.2.7-sources.jar"
+        hash:
+          value: "b6de60589719f20e24c6089a732ff3769575bbb4"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-expression:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-expression@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring Expression Language (SpEL)"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.7/spring-expression-6.2.7.jar"
+        hash:
+          value: "fa525916c85df246fcb70c771d039523dd6f12d9"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.7/spring-expression-6.2.7-sources.jar"
+        hash:
+          value: "2cd02fc48c64ec34e362ae47bf57b87f2bdfc88d"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.springframework:spring-jcl:6.2.7"
+      purl: "pkg:maven/org.springframework/spring-jcl@6.2.7"
+      authors:
+      - "Juergen Hoeller"
+      - "Spring IO"
+      declared_licenses:
+      - "Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache License, Version 2.0: "Apache-2.0"
+      description: "Spring Commons Logging Bridge"
+      homepage_url: "https://github.com/spring-projects/spring-framework"
+      binary_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.7/spring-jcl-6.2.7.jar"
+        hash:
+          value: "16b5f3446a6fcf097f4910c935086d08db657653"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.7/spring-jcl-6.2.7-sources.jar"
+        hash:
+          value: "c713b3defac64716dfc8a5020a97fe6ce19fd058"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/spring-projects/spring-framework"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/spring-projects/spring-framework.git"
+        revision: ""
+        path: ""
+    dependency_graphs:
+      GradleInspector:
+        packages:
+        - "Maven:io.micrometer:micrometer-commons:1.14.7"
+        - "Maven:io.micrometer:micrometer-observation:1.14.7"
+        - "Maven:org.springframework:spring-aop:6.2.7"
+        - "Maven:org.springframework:spring-beans:6.2.7"
+        - "Maven:org.springframework:spring-context:6.2.7"
+        - "Maven:org.springframework:spring-core:6.2.7"
+        - "Maven:org.springframework:spring-expression:6.2.7"
+        - "Maven:org.springframework:spring-jcl:6.2.7"
+        scopes:
+          examples:minimal-backend-repo:1.0-SNAPSHOT:runtimeClasspath:
+          - root: 4
+        nodes:
+        - pkg: 7
+        - pkg: 5
+        - pkg: 3
+        - pkg: 2
+        - pkg: 6
+        - {}
+        - pkg: 1
+        - pkg: 4
+        edges:
+        - from: 1
+          to: 0
+        - from: 2
+          to: 1
+        - from: 3
+          to: 1
+        - from: 3
+          to: 2
+        - from: 4
+          to: 1
+        - from: 6
+          to: 5
+        - from: 7
+          to: 1
+        - from: 7
+          to: 2
+        - from: 7
+          to: 3
+        - from: 7
+          to: 4
+        - from: 7
+          to: 6
+scanner: null
+advisor: null
+evaluator: null
+resolved_configuration:
+  package_curations:
+  - provider:
+      id: "DefaultDir"
+    curations: []
+  - provider:
+      id: "DefaultFile"
+    curations: []
