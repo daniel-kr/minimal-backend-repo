@@ -11,7 +11,5 @@ repositories {
 
 dependencies {
 
-    implementation 'org.springframework:spring-context:6.2.7'
-    implementation 'org.apache.tika:tika-core:3.2.0'
 
 }
