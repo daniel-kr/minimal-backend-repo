@@ -7,9 +7,14 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        name = "shibboleth"
+        url = "https://build.shibboleth.net/nexus/content/repositories/releases/"
+    }
 }
 
 dependencies {
-
-
+    //This has transitive dependency to the OpenSAML library which needs to be fetched from the shibboleth repository
+    //instead of maven central
+    implementation 'org.springframework.security:spring-security-saml2-service-provider:6.4.7'
 }
