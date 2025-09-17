@@ -1,5 +1,5 @@
 /**
- * Elastic-2.0 OR SSPL-1.0
+ * Licensed under the Elastic License 2.0 or the ServerSide Public License, v 1
  */
 
 public class ClassOne {
