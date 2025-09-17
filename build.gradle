@@ -11,5 +11,6 @@ repositories {
 
 dependencies {
 
+    implementation 'org.elasticsearch:elasticsearch-core:7.17.29'
 
 }
